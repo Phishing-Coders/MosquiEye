@@ -1,0 +1,7 @@
+{
+  "name": "MosquiEye",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}

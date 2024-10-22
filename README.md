@@ -28,7 +28,7 @@ MosquiEye leverages AI technology to detect and count mosquito eggs from images 
 - NPM or Yarn
 - Python 3.x (for AI model development)
 - MongoDB/PostgreSQL
-- Docker (optional, for containerization)
+- Docker (optional, for containerization)~
 
 ### **Installation**
 
