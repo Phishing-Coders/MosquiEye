@@ -67,7 +67,7 @@
             fill="clear" 
             @click="createAccount"
           >
-            New on our platform? Create an account
+            Create an account
           </ion-button>
 
           <div class="social-login">
@@ -319,11 +319,11 @@ ion-label {
 ion-input {
   --padding-start: 16px;
   --padding-end: 16px;
-  --padding-top: 12px;
-  --padding-bottom: 12px;
+  --padding-top: 5px;
+  --padding-bottom: 5px;
   --background: var(--ion-color-light);
   --border-radius: 8px;
-  margin-top: 8px;
+  margin-top: 22px;
 }
 
 ion-checkbox {
@@ -333,6 +333,10 @@ ion-checkbox {
   --border-radius: 4px;
   --border-color: var(--ion-color-medium);
   --border-color-checked: var(--ion-color-primary);
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin: 0 auto; 
 }
 
 ion-button {
