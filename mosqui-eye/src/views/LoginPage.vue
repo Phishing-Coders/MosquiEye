@@ -126,6 +126,7 @@ import {
   toastController
 } from '@ionic/vue';
 import { logoFacebook, logoTwitter } from 'ionicons/icons';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
   name: 'LoginPage',
@@ -162,6 +163,7 @@ export default defineComponent({
     });
 
     const isLoading = ref(false);
+    const router = useRouter();
 
     const validateForm = () => {
       let isValid = true;
@@ -207,7 +209,7 @@ export default defineComponent({
         await new Promise(resolve => setTimeout(resolve, 1500)); // Simulating API call
         
         showToast('Login successful!');
-        // Handle successful login (e.g., redirect to dashboard)
+        router.push('/SignUpPage');// Handle successful login (e.g., redirect to dashboard)
       } catch (error) {
         showToast(error.message || 'Login failed', 'danger');
       } finally {
@@ -314,6 +316,8 @@ ion-item {
 ion-label {
   font-size: 14px;
   color: var(--ion-color-medium);
+  flex: 1;
+  text-align: left;
 }
 
 ion-input {
@@ -333,10 +337,6 @@ ion-checkbox {
   --border-radius: 4px;
   --border-color: var(--ion-color-medium);
   --border-color-checked: var(--ion-color-primary);
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  margin: 0 auto; 
 }
 
 ion-button {
@@ -464,7 +464,7 @@ ion-input:focus {
 }
 
 .remember-me ion-label {
-  margin-left: 8px;
+  margin-left: 0px;
   font-size: 14px;
 }
 
